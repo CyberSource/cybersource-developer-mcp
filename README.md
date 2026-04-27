@@ -1,5 +1,11 @@
 # CyberSource Developer MCP
 
+[![PyPI version](https://img.shields.io/pypi/v/cybersource-developer-mcp.svg)](https://pypi.org/project/cybersource-developer-mcp/)
+[![Python versions](https://img.shields.io/pypi/pyversions/cybersource-developer-mcp.svg)](https://pypi.org/project/cybersource-developer-mcp/)
+[![License](https://img.shields.io/pypi/l/cybersource-developer-mcp.svg)](https://pypi.org/project/cybersource-developer-mcp/)
+
+**PyPI**: [https://pypi.org/project/cybersource-developer-mcp/](https://pypi.org/project/cybersource-developer-mcp/)
+
 Let AI write CyberSource integration code directly in your application. This MCP server provides real-time SDK documentation and code generation assistance, enabling your AI assistant to help you integrate any CyberSource API using official SDKs.
 
 ## What is This?
