@@ -15,7 +15,7 @@ This MCP (Model Context Protocol) server connects your AI assistant to live Cybe
 - **Write code directly** for your CyberSource API Integrations
 - **Access real-time** SDK documentation, method signatures, and models
 - **Generate working code** using official CyberSource SDKs
-- **Code Generation**: Supports **Java**, **Python**, **Node.js**, **PHP**, and **Ruby** (other languages coming soon)
+- **Code Generation**: Supports **Java**, **Python**, **Node.js**, **PHP**, and **Ruby** , **dotnet** , **dotnetstandard**
 - **MLE Support**: Helps you integrate or upgrade to Message Level Encryption (MLE) as mandated by CyberSource, with per-API MLE requirement details
 
 Your AI assistant becomes a CyberSource integration expert that writes production-ready code in your application.
@@ -266,7 +266,7 @@ For faster SDK downloads and higher API rate limits, add a GitHub token:
 1. **First Time**: When you ask about a CyberSource API, the server automatically downloads the SDK documentation
 2. **Cached**: Subsequent requests are instant - no re-downloading needed
 3. **Always Current**: The server can check for and use the latest SDK versions
-4. **Multi-Language**: Works with Java, Python, PHP, Node.js, and Ruby (.NET and .NET Standard coming soon)
+4. **Multi-Language**: Works with Java, Python, PHP, Node.js, Ruby, .NET, and .NET Standard
 
 ## Requirements
 
@@ -377,10 +377,10 @@ You can safely delete this directory to start fresh. The server will re-download
 | PHP | ✅ Full Support | ✅ Available | Yes |
 | Node.js | ✅ Full Support | ✅ Available | Yes |
 | Ruby | ✅ Full Support | ✅ Available | Yes |
-| .NET | 🚧 Coming Soon | 🚧 Coming Soon | Yes |
-| .NET Standard | 🚧 Coming Soon | 🚧 Coming Soon | Yes |
+| .NET | ✅ Full Support | ✅ Available | Yes |
+| .NET Standard | ✅ Full Support | ✅ Available | Yes |
 
-**Note**: SDK documentation and code generation templates are available for Java, Python, Node.js, PHP, and Ruby. Support for .NET and .NET Standard is coming soon.
+**Note**: SDK documentation and code generation templates are available for Java, Python, Node.js, PHP, Ruby, .NET, and .NET Standard.
 
 ## Privacy & Security
 
