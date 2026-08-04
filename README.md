@@ -15,7 +15,7 @@ This MCP (Model Context Protocol) server connects your AI assistant to live Cybe
 - **Write code directly** for your CyberSource API Integrations
 - **Access real-time** SDK documentation, method signatures, and models
 - **Generate working code** using official CyberSource SDKs
-- **Code Generation**: Supports **Java**, **Python**, **Node.js**, **PHP**, and **Ruby** , **dotnet** , **dotnetstandard**
+- **Code Generation**: Supports **Java**, **Python**, **Node.js**, **PHP**, **Ruby**, **dotnet** (unified C#/.NET), and **dotnet_standard** (deprecated legacy — use `dotnet` for new integrations)
 - **MLE Support**: Helps you integrate or upgrade to Message Level Encryption (MLE) as mandated by CyberSource, with per-API MLE requirement details
 
 Your AI assistant becomes a CyberSource integration expert that writes production-ready code in your application.
@@ -378,7 +378,7 @@ You can safely delete this directory to start fresh. The server will re-download
 | Node.js | ✅ Full Support | ✅ Available | Yes |
 | Ruby | ✅ Full Support | ✅ Available | Yes |
 | .NET | ✅ Full Support | ✅ Available | Yes |
-| .NET Standard | ✅ Full Support | ✅ Available | Yes |
+| .NET Standard (deprecated) | ✅ Full Support | ✅ Available | Yes |
 
 **Note**: SDK documentation and code generation templates are available for Java, Python, Node.js, PHP, Ruby, .NET, and .NET Standard.
 

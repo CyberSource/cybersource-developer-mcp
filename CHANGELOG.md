@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.3]
+
+### Added
+- Support for the new unified C# (.NET) CyberSource SDK v1.0.0 and above
+
+### Changed
+- Pinned the `mcp` dependency to `>=1.0.0,<2.0.0` to remain on the compatible MCP 1.x SDK
+- Improved exception handling across SDK download and documentation flows
+
+### Fixed
+- Fixed a code generation bug in the .NET Standard SDK
+- Fixed version resolution and latest version fetcher for .NET and Ruby SDKs in MCP
+
+### Security
+- Added path traversal protection for SDK paths via new path validation
+
 ## [0.0.2]
 
 ### Added
@@ -48,5 +64,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Compatible with Cline (VS Code), Claude Desktop, and other MCP-compatible AI assistants
 - Privacy-first design — all data stored locally, no code or conversations sent externally
 
+[0.0.3]: https://github.com/cybersource/cybersource-developer-mcp/releases/tag/v0.0.3
 [0.0.2]: https://github.com/cybersource/cybersource-developer-mcp/releases/tag/v0.0.2
 [0.0.1]: https://github.com/cybersource/cybersource-developer-mcp/releases/tag/v0.0.1
