@@ -9,6 +9,9 @@ description: >
   Unified Checkout v1 (/uc/v1/sessions), TMS token passthrough into UC,
   3DS/Payer Auth, digital wallets, webhooks, recurring billing, and error handling.
   Auto-loads when working with CyberSource SDK files.
+title: CyberSource Best Practices
+type: concept
+keywords: [cybersource, sdk, authentication, jwt, http signature, oauth, mle, unified checkout, tokenization, tms, 3ds, payer auth, digital wallets, webhooks, recurring billing, error handling]
 ---
 
 # CyberSource Best Practices
