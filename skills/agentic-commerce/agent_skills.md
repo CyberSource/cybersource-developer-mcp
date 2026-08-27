@@ -1,6 +1,16 @@
 ---
-name: agent_skills
+name: agentic-commerce
+title: Agentic Commerce Demo (VPP + VIC on CyberSource)
+type: product-integration
 description: Scaffold a runnable Node.js demo of Visa's ICC agentic-commerce flow (VPP + VIC) on CyberSource with JWT auth and MLE encryption. Use when the user wants to build, scaffold, stand up, or demo the ICC / agentic commerce / VPP / VIC / Visa Intelligent Commerce / Visa Payment Passkey checkout flow on CyberSource.
+keywords:
+  - agentic-commerce
+  - vpp
+  - vic
+  - visa-intelligent-commerce
+  - visa-payment-passkey
+  - icc
+  - acp
 ---
 
 # Agentic Commerce Demo (VPP + VIC on CyberSource)
