@@ -1,3 +1,17 @@
+---
+name: unified-checkout-reference
+title: Unified Checkout 1.0 Technical Reference
+type: concept
+description: Unified Checkout 1.0 technical reference — how UC works, the capture-context request bodies and field-placement rules, per-feature blocks (3DS, Decision Manager, TMS, shipping), decoding the /uc/v1/sessions response JWT, the complete-response JWT, the browser mount() pattern, the transient-token flow, and the Secure Acceptance → UC field map for migrations.
+keywords:
+  - unified-checkout
+  - capture-context
+  - uc-sessions
+  - mount
+  - transient-token
+  - sa-to-uc
+---
+
 # Unified Checkout 1.0 — the SA→UC technical reference
 
 Everything for building the UC side and mapping from Secure Acceptance: how to get field detail, how UC works, SA discovery, the verified capture-context bodies, the SA→UC field map, per-feature blocks, the browser mount pattern, and the gotchas. Auth (JWT v2) is in `rest-api.md`.

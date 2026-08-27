@@ -1,6 +1,14 @@
 ---
 name: sa-to-uc-migration
+title: Secure Acceptance to Unified Checkout Migration
+type: migration
 description: Migrate a CyberSource Secure Acceptance (deprecated form-POST + HMAC signed fields) integration to Unified Checkout 1.0 (REST capture-context at /uc/v1/sessions + browser VAS.UnifiedCheckout SDK). Use when the user says "migrate from Secure Acceptance", "SA to UC", "replace silent/pay form", "Unified Checkout migration", or works in a codebase that posts to `secureacceptance.cybersource.com/silent/pay`.
+keywords:
+  - secure-acceptance
+  - unified-checkout
+  - sa-to-uc
+  - migration
+  - capture-context
 ---
 
 # Secure Acceptance → Unified Checkout 1.0 Migration
@@ -33,7 +41,7 @@ Iteration is normal. Real environments surface wrinkles (proxies, package restri
 
    Then the current SA setup and UC target state: transaction type (authorize vs sale); which `merchant_defined_data` slots carry real signal; whether **Decision Manager, 3DS/Payer Auth, and TMS** are enabled today (these drive `completeMandate`, and none may be assumed); single vs multiple profiles/MIDs; currency/region. Don't skip the environment question just because discovery went smoothly.
 
-3. **Set up REST auth.** JWT v2 (HS256) — full contract in `references/rest-api.md`. Find how the project already stores credentials and mirror that; don't impose `.env`. Add placeholders with instructions if real credentials aren't available yet — that doesn't block the build; only the live call fails.
+3. **Set up REST auth.** JWT v2 (HS256) — full contract in `references/rest-api.md`. Prefer the official CyberSource SDK if one exists for the project's language (it builds the JWT and MLE for you); otherwise build the JWT independently per `references/rest-api.md`. Find how the project already stores credentials and mirror that; don't impose `.env`. Add placeholders with instructions if real credentials aren't available yet — that doesn't block the build; only the live call fails.
 
 4. **Build the capture context and frontend.** Everything is in `references/unified-checkout.md` — start from its canonical body and adapt one to the merchant, using the per-feature blocks and the frontend `mount()` pattern. Configure `captureMandate`/`completeMandate` explicitly from the interview answers (enable what the merchant uses, explicitly disable what they don't; don't rely on defaults).
 
