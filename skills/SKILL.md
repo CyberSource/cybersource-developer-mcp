@@ -1,17 +1,20 @@
 ---
-trigger: glob
-globs:
-  - "**/*cybersource*"
-  - "**/*CyberSource*"
-  - "**/cybersource-rest-client*"
+name: cybersource-best-practices
+title: CyberSource Integration Best Practices
+type: concept
 description: >
-  CyberSource REST SDK integration guidance — authentication (JWT/HTTP Signature/OAuth),
+  CyberSource REST SDK integration guidance — authentication (JWT shared secret / P12),
   Unified Checkout v1 (/uc/v1/sessions), TMS token passthrough into UC,
   3DS/Payer Auth, digital wallets, webhooks, recurring billing, and error handling.
-  Auto-loads when working with CyberSource SDK files.
-title: CyberSource Best Practices
-type: concept
-keywords: [cybersource, sdk, authentication, jwt, http signature, oauth, mle, unified checkout, tokenization, tms, 3ds, payer auth, digital wallets, webhooks, recurring billing, error handling]
+keywords:
+  - authentication
+  - jwt
+  - mle
+  - unified-checkout
+  - tms
+  - payer-auth
+  - webhooks
+  - recurring-billing
 ---
 
 # CyberSource Best Practices
@@ -36,7 +39,7 @@ keywords: [cybersource, sdk, authentication, jwt, http signature, oauth, mle, un
 
 ## Authentication
 
-Three auth modes are available: **JWT Shared Secret**, **JWT P12**, and **HTTP Signature**. Both JWT modes are recommended for new integrations; HTTP Signature is deprecated.
+**JWT (Shared Secret)** is the recommended auth method for new integrations. **JWT (P12)** is also fully supported. **HTTP Signature** is deprecated — don't implement it for new work; migrate any existing HTTP Signature integration to JWT Shared Secret (it reuses the same credentials). All JWT auth supports MLE; HTTP Signature does not.
 
 ### JWT (Shared Secret) — Recommended
 
@@ -59,7 +62,7 @@ Certificate-based authentication using a PKCS#12 file. Supports MLE.
 
 ### HTTP Signature — Deprecated
 
-Signs each request with HMAC-SHA256. Being deprecated — migrate to JWT Shared Secret. Does **not** support MLE.
+Signs each request with HMAC-SHA256. **Deprecated — do not implement for new integrations.** If you have an existing HTTP Signature integration, migrate to JWT Shared Secret: it reuses the same `merchantKeyId` + shared secret, so only `authenticationType` changes (add `jwtKeyType=SHARED_SECRET`). Does **not** support MLE.
 
 **SDK config keys:** `authenticationType=http_signature`, `merchantID`, `merchantKeyId`, `merchantsecretKey`, `runEnvironment=apitest.cybersource.com`
 
